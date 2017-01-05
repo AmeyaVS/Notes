@@ -1,0 +1,22 @@
+diff --git a/plugin/srcexpl.vim b/plugin/srcexpl.vim
+index e86fe61..d121d93 100644
+--- a/plugin/srcexpl.vim
++++ b/plugin/srcexpl.vim
+@@ -1444,7 +1444,7 @@ function! <SID>SrcExpl_Init()
+     let s:SrcExpl_lastSymbol = ''
+ 
+     " Auto change current work directory
+-    exe "set autochdir"
++    " exe "set autochdir"
+     " Let Vim find the possible tags file
+     exe "set tags=tags;"
+     " Set the actual update time according to user's requirement
+@@ -1495,7 +1495,7 @@ function! <SID>SrcExpl_Init()
+     " Then we set the routine function when the event happens
+     augroup SrcExpl_AutoCmd
+         autocmd!
+-        au! CursorHold * nested call g:SrcExpl_Refresh()
++        au! CursorHold * call g:SrcExpl_Refresh()
+         au! WinEnter * nested call <SID>SrcExpl_WinEnter()
+     augroup end
+ 

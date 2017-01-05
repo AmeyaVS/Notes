@@ -1,0 +1,5 @@
+# Do not add temp files
+*~
+
+# Do not add the Jupyter Notebook
+.ipynb_checkpoints

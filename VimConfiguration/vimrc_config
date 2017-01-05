@@ -1,0 +1,70 @@
+" User Defined settings
+"
+" Show line numbers
+set number
+" Set incremental search
+set incsearch
+" Set highlight search
+set hlsearch
+" Set ignorecase search
+set ignorecase
+" Set smartcase search
+set smartcase
+" Set splitright to open a new buffer towards right
+set splitright
+" Set undofile keep a backup for all undo operations
+set undofile
+" Set undodir keep a central location of all undo files
+set undodir=~/.vim/undo
+" Set backup file a backup of all edited files using vim.
+set backup
+" Set backupdir to keep a central location of all backupfiles.
+" Disabling for now since the backup file doesn't contain any path information.
+" set backupdir=~/.vim/backup//
+
+" Set the ruler
+set ruler
+" Set matchpairs for angle brackets
+set matchpairs+=<:>
+
+" Set mouse support in vim for moving within different vim buffers.
+set mouse=a
+
+" Setting the limit for line word wrapping(tw)
+set textwidth=80
+" Setting tab stop(ts)
+set tabstop=2
+" Setting shift width(sw)
+set shiftwidth=2
+" Setting expandtab (et)
+set expandtab
+" Setting smartindent(si)
+set smartindent
+" Setting copyindent(ci)
+set copyindent
+
+" Execute pathgen infect
+execute pathogen#infect()
+
+" Trinity Plugin keymaps
+" 
+" Open and close all the three plugins on the same time 
+nmap <F8>  :TrinityToggleAll<CR> 
+
+" Open and close the Source Explorer separately 
+nmap <F9>  :TrinityToggleSourceExplorer<CR> 
+
+" Open and close the Taglist separately 
+nmap <F10> :TrinityToggleTagList<CR> 
+
+" Open and close the NERD Tree separately 
+nmap <F11> :TrinityToggleNERDTree<CR> 
+
+" Adding the clang-format.py integration
+" Note: Kindly add the absolute path to the clang-format.py
+" You'll need to install clang and associated libraries which also installs the clang-format.py script.
+" Also kindly do not remove the <CR> at  the end of each line!!!
+" map <C-K> :pyf <absolute path to clang-format.py><CR>
+" imap <C-K> <c-o> :pyf <absolute path to clang-format.py><CR>
+" e.g.: map <C-K> :pyf /usr/share/vim/vimfiles/syntax/clang-format.py<CR>
+" e.g.: map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format.py<CR>
