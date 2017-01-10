@@ -14,11 +14,13 @@ You'll need swig installed and also the python development headers for building 
  2. Create the interface file:  
     e.g.: [example.i](example.i)
  3. Run swig to generate the wrapper source code:
+    
     ```sh
     swig -python example.i
     ```
     **Note:** Kindly obeserve the output after running the command.
  4. Compile your source code along with the wrapper code.
+    
     ```sh
     # Compile your source code
     gcc -c -fPIC example.c
@@ -27,6 +29,7 @@ You'll need swig installed and also the python development headers for building 
     gcc -c -fPIC example_wrap.c -I/usr/include/python2.7
     ```
  5. Generate the shared library from the source code.
+    
     ```sh
     gcc -shared example.o example_wrap.o -o _example.so -lpython2.7
     ```
@@ -34,9 +37,9 @@ You'll need swig installed and also the python development headers for building 
     wrapper is unable to import the module. Also for windows use the extension __*.dll*__ instead of __*.so*__.  
     **Note:** You can also use the provided __*[build.sh](build.sh)*__ for completing the steps 3, 4, 5 and use the __*[clean.sh](clean.sh)*__ for cleaning the workspace.
 
-## Testing the build dynamic module from python
+## Testing the built dynamic module from python
 
- Here is a sample python script to test the functionality of the C/C++ API from Python.
+ Here is a sample python script to test the functionality of the C/C++ API from the newly built library and Python module from Python.
 
  ```python
  import example

@@ -10,15 +10,18 @@
 ## Building the example
 
  1. Create the build directory and navigate into the build directory.
+    
     ```sh
     mkdir build
     cd build
     ```
  2. Generate Makefile using CMake generator:
+    
     ```sh
     cmake ..
     ```
  3. Build the shared library:
+    
     ```sh
     make
     ```
