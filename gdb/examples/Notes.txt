@@ -24,3 +24,7 @@ http://opensourceforu.com/2011/11/gdb-logging-function-parameters-part-1/
 http://opensourceforu.com/2011/12/gdb-logging-function-parameters-part-2/
 http://opensourceforu.com/2011/08/modify-function-return-value-hack-part-1/
 http://opensourceforu.com/2011/09/modify-function-return-value-hack-part-2/
+http://opensourceforu.com/2015/12/the-basics-of-binary-exploitation/
+https://sourceware.org/gdb/onlinedocs/gdb/Compiling-and-Injecting-Code.html
+https://www.cs.cmu.edu/~gilpin/tutorial/
+http://opensourceforu.com/2010/01/binutils-porting-guide-to-a-new-target-architecture/
