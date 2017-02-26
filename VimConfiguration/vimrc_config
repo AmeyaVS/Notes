@@ -1,3 +1,71 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+"Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" My plugins"
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-git'
+Plugin 'mbbill/undotree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'wesleyche/Trinity'
+Plugin 'wesleyche/SrcExpl'
+Plugin 'wincent/command-t'
+Plugin 'Tag-Signature-Balloons'
+" Plugin 'taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhinz/vim-signify'
+Plugin 'majutsushi/tagbar'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'Shougo/neocomplete.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+"=============================================================
+" Put here the vimrc config from $VIMRUNTIME/vimrc_example.vim
+"=============================================================
 " User Defined settings
 "
 " Show line numbers
@@ -12,10 +80,15 @@ set ignorecase
 set smartcase
 " Set splitright to open a new buffer towards right
 set splitright
-" Set undofile keep a backup for all undo operations
-set undofile
-" Set undodir keep a central location of all undo files
-set undodir=~/.vim/undo
+
+if has("persistent_undo")
+  " Set undodir keep a central location of all undo files
+  set undodir=~/.vim/undo
+
+  " Set undofile keep a backup for all undo operations
+  set undofile
+endif
+
 " Set backup file a backup of all edited files using vim.
 set backup
 " Set backupdir to keep a central location of all backupfiles.
@@ -43,8 +116,21 @@ set smartindent
 " Setting copyindent(ci)
 set copyindent
 
+" Set Filetype plugin on
+filetype plugin on
+
 " Execute pathgen infect
-execute pathogen#infect()
+" execute pathogen#infect()
+
+" Call HelpTags to generate the tags file.
+" http://stackoverflow.com/questions/6970334/vim-pathogen-not-loading-help-docs
+" Run only once if the doc folder have been updated
+" Helptags
+" http://stackoverflow.com/questions/3383502/pathogen-does-not-load-plugins
+" filetype off
+" syntax on
+" filetype plugin indent on
+" filetype plugin on
 
 " Trinity Plugin keymaps
 " 
@@ -52,13 +138,13 @@ execute pathogen#infect()
 nmap <F8>  :TrinityToggleAll<CR> 
 
 " Open and close the Source Explorer separately 
-nmap <F9>  :TrinityToggleSourceExplorer<CR> 
+nmap <F9>  :TrinityToggleSourceExplorer<CR>
 
 " Open and close the Taglist separately 
-nmap <F10> :TrinityToggleTagList<CR> 
+" nmap <F10> :TrinityToggleTagList<CR>
 
 " Open and close the NERD Tree separately 
-nmap <F11> :TrinityToggleNERDTree<CR> 
+nmap <F11> :TrinityToggleNERDTree<CR>
 
 " Adding the clang-format.py integration
 " Note: Kindly add the absolute path to the clang-format.py
@@ -68,3 +154,57 @@ nmap <F11> :TrinityToggleNERDTree<CR>
 " imap <C-K> <c-o> :pyf <absolute path to clang-format.py><CR>
 " e.g.: map <C-K> :pyf /usr/share/vim/vimfiles/syntax/clang-format.py<CR>
 " e.g.: map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format.py<CR>
+" map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format.py<CR>
+
+" Setting global variable for pyclewn
+" Useful while running the pyclewn plugin from gvim.
+let g:pyclewn_terminal = "xterm, -e"
+" Instead of using same window for debugging use seperate tabs.
+" let g:pyclewn_args="--window=usetab"
+" Tag List use Universal Ctags
+let g:Tlist_Ctags_Cmd = "u_ctags"
+
+" Setting tags to all the tags folder
+set tags=./tags,./TAGS,tags,TAGS; " /home/ameya/apps/sysc231a/tags
+
+" Configure undotree
+nnoremap <F5> :UndotreeToggle<CR>
+
+" Configure vim-airline
+set laststatus=2
+
+" Configure signify
+let g:signify_vcs_list = [ 'git', 'svn' ]
+
+" Configure tagbar
+let g:tagbar_ctags_bin = "u_ctags"
+nmap <F10> :TagbarToggle<CR>
+
+" Configure syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Configure neocomplete.vim
+let g:neocomplete#enable_at_startup = 1
+
+" Cscope configuration
+" http://vim.wikia.com/wiki/Autoloading_Cscope_Database
+function! LoadCscope()
+  let db = findfile("cscope.out", ".;")
+  if (!empty(db))
+    let path = strpart(db, 0, match(db, "/cscope.out$"))
+    set nocscopeverbose " suppress 'duplicate connection' error
+    exe "cs add " . db . " " . path
+    set cscopeverbose
+  endif
+endfunction
+au BufEnter /* call LoadCscope()
+
+" setting wildmenu option
+set wildmenu
