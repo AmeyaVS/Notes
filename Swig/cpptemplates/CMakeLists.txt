@@ -7,6 +7,11 @@ project(pair CXX)
 find_package(SWIG REQUIRED)
 include(${SWIG_USE_FILE})
 
+# added instrumentation option.
+add_definitions(
+  -finstrument-functions
+  )
+
 find_package(PythonLibs)
 include_directories(
   ${PYTHON_INCLUDE_PATH}
