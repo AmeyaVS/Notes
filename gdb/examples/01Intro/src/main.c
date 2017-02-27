@@ -30,16 +30,16 @@ void print(uint32_t *arr, uint32_t n) {
   printf("\n");
 }
 
-void sort(uint32_t **arr, uint32_t n) {
+void sort(uint32_t *arr, uint32_t n) {
   uint32_t i = 0, j= 0;
   uint32_t swapCount = 0;
   for(i = 0; i < (n - 1); ++i) {
     swapCount = 0;
     for(j = 0; j < (n - 1 - i); ++j) {
-      if ((*arr)[j] > (*arr)[j + 1]) {
-        uint32_t temp = (*arr)[j];
-        (*arr)[j] = (*arr)[j + 1];
-        (*arr)[j + 1] = temp;
+      if (arr[j] > arr[j + 1]) {
+        uint32_t temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
         ++swapCount;
       }
     }
@@ -56,7 +56,7 @@ void do_work(uint32_t n) {
   // Print the array.
   print(arr, n);
   // Sort the array.
-  sort(&arr, n);
+  sort(arr, n);
   // Print the sorted array.
   print(arr, n);
   // release the memory allocated by populate.
