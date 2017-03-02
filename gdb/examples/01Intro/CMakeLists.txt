@@ -14,3 +14,8 @@ add_executable(
   ${PROJECT_NAME}.run
   src/main.c
   )
+
+add_executable(
+  ${PROJECT_NAME}_merge.run
+  src/merge.c
+  )

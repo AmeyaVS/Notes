@@ -28,3 +28,20 @@ http://opensourceforu.com/2015/12/the-basics-of-binary-exploitation/
 https://sourceware.org/gdb/onlinedocs/gdb/Compiling-and-Injecting-Code.html
 https://www.cs.cmu.edu/~gilpin/tutorial/
 http://opensourceforu.com/2010/01/binutils-porting-guide-to-a-new-target-architecture/
+
+# For running the reverse debugging kindly follow the steps below:
+
+* Start the debugging session.
+* Put breakpoint in main.
+* Put breakpoint at the end of main before exit.
+* run the program.
+* Set this environment variable.
+    set environment LD_BIND_NOW=1
+* start recording the process.
+    record full
+* continue till end of the program.
+* try reverse-continue to see if you are able to return to the beginning of
+  the program.
+
+* Attaching to running process in Ubuntu (refer section ptrace Protection):
+  https://wiki.ubuntu.com/SecurityTeam/Roadmap/KernelHardening#ptrace%20Protection

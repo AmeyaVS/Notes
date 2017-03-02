@@ -169,3 +169,7 @@ ENV/
 .ropeproject
 
 # End of https://www.gitignore.io/api/linux,windows,c,c++,python
+
+# Adding that cmake generated compile_commands.json is currently not added to
+# git reposiroty accidently.
+compile_commands.json
