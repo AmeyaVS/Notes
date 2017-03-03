@@ -3,13 +3,13 @@ cmake_minimum_required(VERSION 3.0)
 
 project(examples)
 
-#add_definitions(
-#  -ggdb3
+add_definitions(
+  -ggdb3
 #  Tuning to native processor architecture.
 #  -mtune=native
 #  Instrumenting the code.
 #  -finstrument-functions
-#  )
+  )
 
 add_subdirectory(01Intro)
 add_subdirectory(02StaticBuildAndLibrary)
