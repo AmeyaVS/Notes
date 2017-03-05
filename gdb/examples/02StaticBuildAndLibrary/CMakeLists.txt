@@ -9,11 +9,6 @@ include_directories(
   include
   )
 
-# For tracing
-#add_definitions(
-#  -finstrument-functions
-#  )
-
 add_executable(
   ${PROJECT_NAME}.run
   src/fact.c

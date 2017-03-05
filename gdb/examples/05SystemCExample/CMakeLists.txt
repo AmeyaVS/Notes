@@ -14,11 +14,6 @@ link_directories(
   $ENV{SYSTEMC_HOME}/lib-linux64
   )
 
-# For tracing
-#add_definitions(
-#  -finstrument-functions
-#  )
-
 add_executable(
   ${PROJECT_NAME}.run
   src/main.cpp
