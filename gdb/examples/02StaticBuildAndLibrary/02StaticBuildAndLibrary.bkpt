@@ -9,3 +9,4 @@ break fibo.c:fibo_logn
 break fibo.c:fibo_mat
 break fibo.c:fibo_mat2
 break fibo.c:fibo_rec
+break multiply

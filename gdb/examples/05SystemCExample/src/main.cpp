@@ -10,7 +10,7 @@ int sc_main(int argc, char* argv[]) {
     n = atoi(argv[1]);
   if (n >= 1) {
     // Instantiate top module.
-    top t("top", n);
+    top("top", n);
 
     // Start simulation.
     sc_start(100, sc_core::SC_NS);
