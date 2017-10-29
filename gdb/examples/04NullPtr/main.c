@@ -20,7 +20,7 @@ void set_my_struct(my_struct *ms) {
 void print_my_struct(my_struct *ms) {
   for(int i = 0; i < 8; ++i) {
     char val = ms->e.str[i];
-    printf("0x%02x: %c\n", val, val);
+    printf("0x%02x: %c,  %p\n", val, val, ms);
   }
 }
 
@@ -32,8 +32,8 @@ int main() {
   int a = 100;
   printf("a: %d\n", a);
   setint(&a, 20);
-  printf("a: %d\n", a);
-#if 1
+  printf("a: %d, %p\n", a, &a);
+#if 0
   int* b = NULL;
   setint(b, 50);
   printf("b: %d\n", *b);

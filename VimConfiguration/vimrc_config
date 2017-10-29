@@ -47,6 +47,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'justmao945/vim-clang'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
