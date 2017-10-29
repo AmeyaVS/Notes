@@ -1,0 +1,59 @@
+# How to extract and remove the debugging information from and executable.
+
+## To extract only the debug info.
+
+    objcopy --only-keep-debug foo foo.debug
+
+## To remove the debug symbols from executable, but Symbol table is still present.
+
+    strip -g foo
+
+## To complete remove the symbol information.
+
+    strip -s foo
+
+## Adding debug file link.
+
+    objcopy --add-gnu-debuglink=foo.debug foo
+___
+
+### Searches and Tutorials references:
+
+#### gdb example where application doesn't crash in debug build but crashes in release
+* http://stackoverflow.com/questions/2347562/program-crashes-only-in-release-mode-outside-debugger
+* http://stackoverflow.com/questions/4628521/segfault-only-when-not-using-debugger
+* http://stackoverflow.com/questions/914833/linux-c-how-to-debug-release-application
+* http://opensourceforu.com/2014/02/peek-gnu-debugger-gdb/
+* http://opensourceforu.com/2016/12/gnu-tools-help-develop-cc-applications/
+* http://opensourceforu.com/2011/11/gdb-logging-function-parameters-part-1/
+* http://opensourceforu.com/2011/12/gdb-logging-function-parameters-part-2/
+* http://opensourceforu.com/2011/08/modify-function-return-value-hack-part-1/
+* http://opensourceforu.com/2011/09/modify-function-return-value-hack-part-2/
+* http://opensourceforu.com/2015/12/the-basics-of-binary-exploitation/
+* https://sourceware.org/gdb/onlinedocs/gdb/Compiling-and-Injecting-Code.html
+* https://www.cs.cmu.edu/~gilpin/tutorial/
+* http://opensourceforu.com/2010/01/binutils-porting-guide-to-a-new-target-architecture/
+
+___
+
+## For running the reverse debugging kindly follow the steps below:
+
+* Start the debugging session.
+* Put breakpoint in main.
+* Put breakpoint at the end of main before exit.
+* run the program.
+* Set this environment variable.
+    set environment LD_BIND_NOW=1
+* start recording the process.
+    record full
+* continue till end of the program.
+* try reverse-continue to see if you are able to return to the beginning of
+  the program.
+
+* Attaching to running process in Ubuntu (refer section ptrace Protection):
+  - http://askubuntu.com/questions/41629/after-upgrade-gdb-wont-attach-to-process
+  - https://wiki.ubuntu.com/SecurityTeam/Roadmap/KernelHardening#ptrace%20Protection
+
+* Vim Copying and psting from online sources:
+  vim add comments while copying code from a website
+  - http://stackoverflow.com/questions/7736006/vim-inserting-comments-while-copy-pasting

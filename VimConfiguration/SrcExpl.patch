@@ -19,4 +19,3 @@ index e86fe61..d121d93 100644
 +        au! CursorHold * call g:SrcExpl_Refresh()
          au! WinEnter * nested call <SID>SrcExpl_WinEnter()
      augroup end
- 
