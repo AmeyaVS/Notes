@@ -1,4 +1,42 @@
-# Python tips and tricks.
+# Python tips and tricks #
+
+## Python Development ##
+
+* Use `virtualenv` for development of isolated environment.
+
+    1. You should have a basic working pip tool setup available.(Python2: pip2/ Python3: pip3)  
+    **Use the distributions package manager to install the pip tool.**
+    2. Follow the step to install `virtualenv`:
+        ```sh
+        # Use pip2 or pip3 according to the availabilty.
+        # Referenced here as `pip`
+        pip install --user virtualenv
+        ```
+        **Note:** You should have `$HOME/.local/bin` in your `$PATH` environment variable.
+
+    3. Setting up a virtual environment for development:  
+    **Only one python executable can be used for the virtual environment setup.**
+        ```sh
+        # For Python2 Development
+        virtualenv -p /usr/bin/python2.7 my_project
+        # For Python3 Development
+        virtualenv -p /usr/bin/python3 my_project
+        ```
+    4. Activating the virtual environment:  
+       For Linux:
+        ```sh
+        source my_project/bin/activate
+        ```
+       For Windows:
+       ```bat
+       .\my_project\Scripts\activate
+       ```
+    5. De-activating the virtual environment:
+        ```sh
+        deactivate
+        ```
+
+## Utilities ##
 
 * Simple and easy accessible __*webserver*__ for quick file sharing.
 
@@ -39,3 +77,27 @@
 2. The `HTTP Server` is **unsecured!!!**, anybody with network access can access
    the directory from where the script is started.
 3. Kindly use it only on **Private and Trusted Network**.
+
+## Tools and Libraries ##
+
+List of Python libraries and tools:
+
+**Available as command line**
+
+```sh
+pip install --user \
+                   flask \
+                   gdbgui \
+                   grip \
+                   jupyter \
+                   matplotlib \
+                   numpy \
+                   scipy
+```
+
+## To-Do ##
+
+1. Securing the Jupyter NoteBook installation.
+2. Add Code for QRCode Generator.
+3. Add the Python API Tracer.
+4. ......
