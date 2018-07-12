@@ -27,6 +27,8 @@ sudo apt install \
                  build-essential \
                  chrpath \
                  cmake \
+                 cscope \
+                 ctags \
                  curl \
                  device-tree-compiler \
                  dkms \
@@ -60,6 +62,7 @@ sudo apt install \
                  putty \
                  python3-dev \
                  python3-pip \
+                 python3-tk \
                  python-dev \
                  python-pip \
                  ruby \
