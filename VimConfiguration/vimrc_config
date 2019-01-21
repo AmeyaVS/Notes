@@ -48,6 +48,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'justmao945/vim-clang'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
