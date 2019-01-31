@@ -1,0 +1,29 @@
+http://eli.thegreenplace.net/2012/12/17/dumping-a-c-objects-memory-layout-with-clang
+
+dumping the memory layout use this
+
+clang++ -c -Xclang -fdump-record-layouts <input source file.>
+
+clang "-fdump-record-layouts" not working
+
+
+Using g++ to extract struct info.
+gcc fdump record layout
+http://stackoverflow.com/questions/26468315/is-there-any-way-to-dump-the-class-layout-of-a-g-compiled-program
+http://article.gmane.org/gmane.comp.debugging.dwarves/109
+
+http://stackoverflow.com/questions/2549618/is-there-any-g-option-to-dump-class-layout-and-vtables
+
+g++ -fdump-class-hierarchy -c <sourecefile>
+
+http://stackoverflow.com/questions/2123823/dump-class-struct-member-variables-in-g
+
+http://www.yolinux.com/TUTORIALS/LinuxTutorialC++Structures.html
+
+https://ofekshilon.com/2010/11/07/d1reportallclasslayout-dumping-object-memory-layout/
+
+http://stackoverflow.com/questions/2979606/print-layout-of-c-object-with-g-compiler
+
+http://stackoverflow.com/questions/1632600/memory-layout-c-objects
+
+http://dieharddeveloper.blogspot.in/2013/07/c-memory-layout-and-process-image.html
