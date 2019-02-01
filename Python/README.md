@@ -101,3 +101,8 @@ pip install --user \
 2. Add Code for QRCode Generator.
 3. Add the Python API Tracer.
 4. ......
+
+## CTypes Example
+
+* Ctypes library for calling `C/C++` API's from python.
+* Simple example available in [ctypes]() directory.
