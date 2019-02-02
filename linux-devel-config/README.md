@@ -74,3 +74,14 @@ sudo apt install \
                  zlib1g-dev
 ```
 **Note:** This list is transient as it will keep on changing overtime, as and when I will be working on various tools and libraries.
+
+## Fedora Shell Configuration
+
+Refer the file: [fedora.bashrc](fedora.bashrc) for more details.
+
+### Features
+
+* Enables bash tab completion feature.
+* Setup a custom PS1 prompt.
+* Setup Git PS1 prompt for git repos.
+* Plus extra config for external libraries and utilities.
