@@ -71,7 +71,14 @@ sudo apt install \
                  texinfo \
                  uml-utilities \
                  vim \
-                 zlib1g-dev
+                 zlib1g-dev \
+                 libxml2-dev \
+                 libjansson-dev \
+                 libyaml-dev \
+                 libaspell-dev \
+                 docutils-common \
+                 seccomp \
+                 libseccomp-dev
 ```
 **Note:** This list is transient as it will keep on changing overtime, as and when I will be working on various tools and libraries.
 
