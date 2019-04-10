@@ -1,10 +1,10 @@
-PROJECT := interesting-crash
+PROJECT := cpplambda
 
 CXX := g++
 
-CXXFLAGS := -MMD -MP -std=c++11 -Wall -Wextra -Wpedantic -ggdb3
+CXXFLAGS := -MMD -MP -std=c++14 -Wall -Wextra -Wpedantic -ggdb3
 
-SRCS_CXX := interesting-crash.cpp
+SRCS_CXX := cpplambda.cpp
 OBJS := $(SRCS_CXX:%=%.o)
 DEPS := $(OBJS:.o=.d)
 
