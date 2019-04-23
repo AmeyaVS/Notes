@@ -92,3 +92,15 @@ Refer the file: [fedora.bashrc](fedora.bashrc) for more details.
 * Setup a custom PS1 prompt.
 * Setup Git PS1 prompt for git repos.
 * Plus extra config for external libraries and utilities.
+
+### Some Common applications/libraries for optimal development environment
+
+* [apps](apps): Contains basic building bash scripts for building a set of
+  commonly used tools/utilities or libraries for development activities.
+  * [ctags](apps/ctags-build.sh): Universal-Ctags.
+  * [googletest](apps/googletest-build.sh): C++ Unit test framework.
+  * **TODO:**
+    * [cppcheck](): An open source C/C++ static analysis tool.
+    * [uftrace](): A C/C++ application profiler
+    * [uncrustify](): Source code beautifier
+

@@ -7,7 +7,7 @@ swig -python example.i
 gcc -c -fPIC example.c
 
 # Compile the Generated wrapper.
-gcc -c -fPIC example_wrap.c -I /usr/include/python2.7
+gcc -c -fPIC example_wrap.c -I /usr/include/python3.7m
 
 # Link the library with the wrapper library
-gcc -shared example.o example_wrap.o -o _example.so -lpython2.7
+gcc -shared example.o example_wrap.o -o _example.so -lpython3

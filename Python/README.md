@@ -2,20 +2,56 @@
 
 ## Python Development ##
 
-* Use `virtualenv` for development of isolated environment.
+* Use `virtualenv` and `virtualenvwrapper` for development of isolated environment.
 
     1. You should have a basic working pip tool setup available.(Python2: pip2/ Python3: pip3)  
-    **Use the distributions package manager to install the pip tool.**
-    2. Follow the step to install `virtualenv`:
+       **Use the distributions package manager to install the pip tool.**
+    2. Follow the step to install `virtualenv` and `virtualenvwrapper`:
         ```sh
         # Use pip2 or pip3 according to the availabilty.
         # Referenced here as `pip`
-        pip install --user virtualenv
+        pip install --user virtualenv virtualenvwrapper
         ```
         **Note:** You should have `$HOME/.local/bin` in your `$PATH` environment variable.
+    3. Setting up a virtualenvwrapper environment:
+        ```sh
+        # Setup following lines in your ~/.bashrc
+        export WORKON_HOME=$HOME/apps/pyenv
+        # Locate Python3 executable using this command: $ which python3
+        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+        source ~/.local/bin/virtualenvwrapper.sh
+        ```
+    4. Creating a virtualenvironment:
+        ```sh
+        # For default Python 3 Environment
+        mkvirtualenv py3grip
+        # Check Virtualenv Python version
+        python --version
+        pip install grip
+        # For Python 2 Environment
+        mkvirutalenv py2grip -p python2
+        # Check Virtualenv Python version
+        python --version
+        pip install grip
+        ```
+    5. Activating the environment:
+        ```sh
+        workon py3grip
+        ```
+    6. De-activating the virtual environment:
+        ```sh
+        deactivate
+        ```
+**NOTE:** Refer the documentation of virtualenvwrapper for user-defined hooks
+for setting up a development environment for C/C++ Projects.
+
+---
+
+**Old steps**
+
 
     3. Setting up a virtual environment for development:  
-    **Only one python executable can be used for the virtual environment setup.**
+       **Only one python executable can be used for the virtual environment setup.**
         ```sh
         # For Python2 Development
         virtualenv -p /usr/bin/python2.7 my_project
@@ -28,13 +64,14 @@
         source my_project/bin/activate
         ```
        For Windows:
-       ```bat
-       .\my_project\Scripts\activate
-       ```
+        ```bat
+        .\my_project\Scripts\activate
+        ```
     5. De-activating the virtual environment:
         ```sh
         deactivate
         ```
+---
 
 ## Utilities ##
 
@@ -81,6 +118,9 @@
 ## Tools and Libraries ##
 
 List of Python libraries and tools:
+
+**NOTE:** Use the virtualenvwrapper to create separate virtual environment for
+these libraries/tools as they might have conflicting dependencies.
 
 **Available as command line**
 
