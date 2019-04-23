@@ -1,6 +1,6 @@
 # This is a CMake example for python
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.8)
 
 project(pair CXX)
 
@@ -25,5 +25,5 @@ message(STATUS "Python Modules Libraries: " ${PYTHON_MODULE_PATH})
 
 set_source_files_properties(src/${PROJECT_NAME}.i PROPERTIES CPLUSPLUS ON)
 set_source_files_properties(src/${PROJECT_NAME}.i PROPERTIES SWIG_FLAGS "-includeall")
-swig_add_module(${PROJECT_NAME} python src/${PROJECT_NAME}.i include/pair.h)
+swig_add_library(${PROJECT_NAME} TYPE SHARED LANGUAGE python SOURCES src/${PROJECT_NAME}.i include/pair.h)
 swig_link_libraries(${PROJECT_NAME} ${PYTHON_LIBRARIES})

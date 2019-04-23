@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.8)
 project (Fibonacci)
 set(CMAKE_VERBOSE_MAKEFILE 1)
 
@@ -17,5 +17,5 @@ SET(CMAKE_SWIG_FLAGS "-Wall")
 SET_SOURCE_FILES_PROPERTIES(fibonacci.i PROPERTIES CPLUSPLUS ON)
 SET_PROPERTY(SOURCE fibonacci.i PROPERTY SWIG_FLAGS "-builtin")
 
-SWIG_ADD_MODULE(fibonacci python fibonacci.i fibonacci.cpp)
+SWIG_ADD_LIBRARY(fibonacci LANGUAGE python SOURCES fibonacci.i fibonacci.cpp)
 SWIG_LINK_LIBRARIES(fibonacci ${PYTHON_LIBRARIES})

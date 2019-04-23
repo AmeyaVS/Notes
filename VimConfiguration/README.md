@@ -16,7 +16,7 @@ I currently use following plugins with Vim:
 - [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [taglist](https://github.com/vim-scripts/taglist.vim)
 - [Trinity](https://github.com/wesleyche/Trinity)
-- [vim-pathogen](https://github.com/tpope/vim-pathogen)
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 
 ### Installing the individual plugins
@@ -60,7 +60,7 @@ pip install pyclewn --user
 
 - **Note:** Kindly note the --user option passed to the pip command to install it as local user package.
 - Also check if the path environment variable points to the ~/.local/bin folder.
-
+**Note:** This package seems to be deprecated.
 
 Install the Vim runtime files with a vimball.
 
@@ -119,17 +119,25 @@ git clone https://github.com/wesleyche/Trinity.git
 
 **Warning:** Kindly remove the nerdtree plugin packaged with Trinity.
 
-#### vim-pathogen plugin
+#### Vundle plugin
 
-For installing the pathogen plugin kindly follow these steps:
+For installing the Vundle plugin kindly follow these steps:
 
 ```sh
-git clone https://github.com/tpope/vim-pathogen.git
-cp -rfv vim-pathogen/autoload/pathogen.vim ~/.vim/autoload
+cd .vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim
 ```
 
-**Note:** Kindly add the line: "*execute pathogen#infect()*" in ~/.vimrc file to automatically add plugins by placing the plugin related files into the ~/.vim/bundle folder.
+**Note:** Follow the official documentation for installing and managing the Vim plugins through Vundle.
 
 #### YouCompleteMe
 
 For installing this plugin kindly refer to the [projects documentation](https://github.com/Valloric/YouCompleteMe) on building and installing the plugin for Vim.
+
+Below steps replicated here for convenience:
+
+```sh
+cd ~/.vim/bundle/YouCompleteMe
+git submodule --init --recursive
+python3 ./install.py --clang-completer
+```
