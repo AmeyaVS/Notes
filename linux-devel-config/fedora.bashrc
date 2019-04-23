@@ -32,9 +32,14 @@ export GIT_PS1_SHOWCOLORHINTS=true
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h:\[$(tput sgr0)\]\[$(tput setaf 3)\]\w\[$(tput setaf 6)\]\$(__git_ps1 '(%s)')\[\]\[$(tput setaf 1)\]\\$ \[$(tput sgr0)\]"
 
+# VirtualEnv and VirtualEnvWrapper
+export WORKON_HOME=$HOME/apps/pyenv
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source ~/.local/bin/virtualenvwrapper.sh
+
 # SystemC
 export SYSTEMC_HOME=$HOME/apps/systemc-2.3.3
-export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib64
+export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib64:$SYSTEMC_HOME/lib
 
 # Sphinx Documentation
 #export Sphinx_DIR=$HOME/.local/bin
@@ -58,3 +63,15 @@ export UFTRACE_HOME=$HOME/apps//uftrace
 export PATH=$UFTRACE_HOME/bin:$PATH
 source $UFTRACE_HOME/etc/bash_completion.d/uftrace
 
+# tracer
+export TRACER_HOME=$HOME/apps/tracer
+export PATH=$TRACER_HOME/bin:$PATH
+
+# Jacksum
+export JACKSUM_HOME=$HOME/apps/src/jacksum
+export PATH=$JACKSUM_HOME/unix:$PATH
+
+# Boost
+export BOOST_ROOT=$HOME/apps/src/boost/boost_1_70_0
+export BOOST_HOME=$BOOST_ROOT
+export LD_LIBRARY_PATH=$BOOST_ROOT/stage/lib:$LD_LIBRARY_PATH
