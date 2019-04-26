@@ -55,8 +55,9 @@ export PATH=$UCTAGS_HOME/bin:$PATH
 
 # GoogleTest
 export GTEST_HOME=$HOME/apps/gtest
-export LD_LIBRARY_PATH=$GTEST_HOME/lib64:$LD_LIBRARY_PATH
-export PKG_CONFIG_PATH=$GTEST_HOME/lib64/pkgconfig:$PKG_CONFIG_PATH
+export GTEST_COLOR=1
+export LD_LIBRARY_PATH=$GTEST_HOME/lib64:$GTEST_HOME/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$GTEST_HOME/lib64/pkgconfig:$GTEST_HOME/lib/pkgconfig:$PKG_CONFIG_PATH
 
 # uftrace
 export UFTRACE_HOME=$HOME/apps//uftrace

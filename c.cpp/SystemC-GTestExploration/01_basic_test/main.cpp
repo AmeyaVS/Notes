@@ -117,5 +117,6 @@ int sc_main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     test_driver td{"td"};
     sc_start();
+    return 0;
 }
 
