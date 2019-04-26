@@ -2,6 +2,9 @@
 #include <cstdio>
 #include <iostream>
 
+#define GLOBAL_DECL 1
+
+#if GLOBAL_DECL
 struct __main_lambda_0
 {
   auto operator()() const {
@@ -36,8 +39,46 @@ struct __main_lambda_3
     return 5 + i + val;
   }
 };
+#endif  // GLOBAL_DECL
 
 int main() {
+#if !GLOBAL_DECL
+  struct __main_lambda_0
+  {
+    auto operator()() const {
+      std::cout << "function: " <<  __PRETTY_FUNCTION__ << std::endl;
+      return 5;
+    }
+  };
+
+  struct __main_lambda_1
+  {
+    auto operator()(int i) const {
+      std::cout << "function: " <<  __PRETTY_FUNCTION__ << std::endl;
+      return 5 + i;
+    }
+  };
+
+  struct __main_lambda_2
+  {
+    int val;
+    auto operator()(int i) const {
+      std::cout << "function: " <<  __PRETTY_FUNCTION__ << std::endl;
+      return 5 + i + val;
+    }
+  };
+
+  struct __main_lambda_3
+  {
+    int val;
+    template<typename T>
+      auto operator()(T i) {
+        std::cout << "function: " <<  __PRETTY_FUNCTION__ << std::endl;
+        return 5 + i + val;
+      }
+  };
+#endif  // !GLOBAL_DECL
+
   auto l = []() {
     std::cout << "function: " <<  __PRETTY_FUNCTION__ << std::endl;
     return 5;
