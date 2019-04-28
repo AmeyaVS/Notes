@@ -1,0 +1,7 @@
+[package]
+name = "cargo-project"
+version = "0.1.0"
+authors = ["Ameya Vikram Singh"]
+edition = "2018"
+
+[dependencies]
