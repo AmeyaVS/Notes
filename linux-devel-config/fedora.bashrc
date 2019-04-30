@@ -45,9 +45,9 @@ export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib64:$SYSTEMC_HOME/lib
 #export Sphinx_DIR=$HOME/.local/bin
 
 # Jansson
-export JANSSON_HOME=$HOME/apps/jansson
-export LD_LIBRARY_PATH=$JANSSON_HOME/lib:$LD_LIBRARY_PATH
-export PKG_CONFIG_PATH=$JANSSON_HOME/lib/pkgconfig
+#export JANSSON_HOME=$HOME/apps/jansson
+#export LD_LIBRARY_PATH=$JANSSON_HOME/lib:$LD_LIBRARY_PATH
+#export PKG_CONFIG_PATH=$JANSSON_HOME/lib/pkgconfig
 
 # Ctags
 export UCTAGS_HOME=$HOME/apps/ctags
@@ -55,8 +55,9 @@ export PATH=$UCTAGS_HOME/bin:$PATH
 
 # GoogleTest
 export GTEST_HOME=$HOME/apps/gtest
-export LD_LIBRARY_PATH=$GTEST_HOME/lib64:$LD_LIBRARY_PATH
-export PKG_CONFIG_PATH=$GTEST_HOME/lib64/pkgconfig:$PKG_CONFIG_PATH
+export GTEST_COLOR=1
+export LD_LIBRARY_PATH=$GTEST_HOME/lib64:$GTEST_HOME/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$GTEST_HOME/lib64/pkgconfig:$GTEST_HOME/lib/pkgconfig
 
 # uftrace
 export UFTRACE_HOME=$HOME/apps//uftrace
@@ -64,8 +65,8 @@ export PATH=$UFTRACE_HOME/bin:$PATH
 source $UFTRACE_HOME/etc/bash_completion.d/uftrace
 
 # tracer
-export TRACER_HOME=$HOME/apps/tracer
-export PATH=$TRACER_HOME/bin:$PATH
+#export TRACER_HOME=$HOME/apps/tracer
+#export PATH=$TRACER_HOME/bin:$PATH
 
 # Jacksum
 export JACKSUM_HOME=$HOME/apps/src/jacksum
@@ -75,3 +76,11 @@ export PATH=$JACKSUM_HOME/unix:$PATH
 export BOOST_ROOT=$HOME/apps/src/boost/boost_1_70_0
 export BOOST_HOME=$BOOST_ROOT
 export LD_LIBRARY_PATH=$BOOST_ROOT/stage/lib:$LD_LIBRARY_PATH
+
+# Pahole utility
+export PAHOLE_HOME=$HOME/apps/pahole
+export PATH=$PAHOLE_HOME/bin:$PATH
+
+# LCOV
+export LCOV_HOME=$HOME/apps/lcov
+export PATH=$LCOV_HOME/bin:$PATH

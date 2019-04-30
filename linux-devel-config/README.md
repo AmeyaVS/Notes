@@ -54,8 +54,6 @@ sudo apt install \
                  libsdl1.2-dev \
                  libtool \
                  libusb-1.0-0-dev \
-                 libzmq1 \
-                 libzmq-dev \
                  meld \
                  patchutils \
                  pkg-config \
@@ -78,7 +76,15 @@ sudo apt install \
                  libaspell-dev \
                  docutils-common \
                  seccomp \
-                 libseccomp-dev
+                 libseccomp-dev \
+                 clang \
+                 llvm-runtime \
+                 libelf-dev \
+                 libdwarf-dev \
+                 libdw-dev \
+                 pandoc \
+                 libbz2-dev \
+                 libzstd-dev
 ```
 **Note:** This list is transient as it will keep on changing overtime, as and when I will be working on various tools and libraries.
 
