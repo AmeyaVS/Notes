@@ -1,7 +1,7 @@
 #include <systemc.h>
 #include "gtest/gtest.h"
 
-class test_driver;
+struct test_driver;
 
 test_driver *test_driver_p = nullptr;
 
@@ -80,7 +80,16 @@ namespace {
 
         virtual ~accum_test() {}
 
+        void SetUp() override {
+            std::cout << "SetUp\n";
+        }
+
+        void TearDown() override {
+            std::cout << "TearDown\n";
+        }
+
         void reset_dut(){
+            std::cout << "Reset\n";
             td.reset = 1;
             wait();
             td.reset = 0;

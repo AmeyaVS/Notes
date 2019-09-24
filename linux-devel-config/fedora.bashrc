@@ -93,3 +93,6 @@ export PATH=$NODEJS_HOME/bin:$PATH
 # CppInsights
 export CPPINSIGHTS=$HOME/apps/cppinsights
 export PATH=$CPPINSIGHTS/bin:$PATH
+
+# Catch2
+export CATCH2_HOME=$HOME/apps/catch2

@@ -1,0 +1,14 @@
+{
+    "catch2TestExplorer.executables": [
+        {
+            "name": "${filename}",
+            "description": "${relDirpath}/",
+            "pattern": "{build,Build,BUILD,out,Out,OUT}/**",
+            "cwd":"${workspaceFolder}",
+            "env": {"SYSTEMC_DISABLE_COPYRIGHT_MESSAGE": "1"}
+        }
+    ],
+    "files.associations": {
+        "cstddef": "cpp"
+    }
+}

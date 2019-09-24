@@ -18,15 +18,16 @@ class nand_test: public ::testing::Test {
     test_driver<bool, nand<bool> > & tb;
     //nand_test(): tb(factory::get<nand<bool> >()) {
     nand_test(): tb(*static_cast<test_driver<bool, nand<bool> > *>(get_test_driver())) {
-      reset_dut();
+      //reset_dut();
     }
     
     ~nand_test() override {};
 
     void SetUp() override {
       //while(lock == true);
-      //g_singleThread.lock();
+      g_singleThread.lock();
       reset_dut();
+      std::cout << "SetUp\n";
       //lock = true;
     }
     void reset_dut() {
@@ -38,7 +39,8 @@ class nand_test: public ::testing::Test {
 
     void TearDown() override {
       //lock = false;
-      //g_singleThread.unlock();
+      g_singleThread.unlock();
+      std::cout << "TearDown\n";
     }
 }; //< nand_test
 
