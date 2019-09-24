@@ -84,7 +84,11 @@ sudo apt install \
                  libdw-dev \
                  pandoc \
                  libbz2-dev \
-                 libzstd-dev
+                 libzstd-dev \
+                 clang-tidy \
+                 libclang-dev \
+                 llvm \
+                 libcapstone-dev
 ```
 **Note:** This list is transient as it will keep on changing overtime, as and when I will be working on various tools and libraries.
 

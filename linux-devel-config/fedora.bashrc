@@ -15,7 +15,7 @@ export PATH
     . /usr/share/bash-completion/bash_completion
 
 # https://fedoraproject.org/wiki/Git_quick_reference
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+source /etc/bash_completion.d/git-prompt
 # Refer: https://gist.github.com/sheldonh/41d4422605d4909cd2de
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -30,7 +30,7 @@ export GIT_PS1_SHOWCOLORHINTS=true
 #export PS1="[\u@\h:\W \$( __git_ps1 '(%s)')]\$"
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h:\[$(tput sgr0)\]\[$(tput setaf 3)\]\w\[$(tput setaf 6)\]\$(__git_ps1 '(%s)')\[\]\[$(tput setaf 1)\]\\$ \[$(tput sgr0)\]"
+export PS1="${debian_chroot:+($debian_chroot)}\[$(tput bold)\]\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 4)\]\h:\[$(tput sgr0)\]\[$(tput setaf 3)\]\w\[$(tput setaf 6)\]\$(__git_ps1 '(%s)')\[\]\[$(tput setaf 1)\]\\$ \[$(tput sgr0)\]"
 
 # VirtualEnv and VirtualEnvWrapper
 export WORKON_HOME=$HOME/apps/pyenv
@@ -73,14 +73,23 @@ export JACKSUM_HOME=$HOME/apps/src/jacksum
 export PATH=$JACKSUM_HOME/unix:$PATH
 
 # Boost
-export BOOST_ROOT=$HOME/apps/src/boost/boost_1_70_0
+export BOOST_ROOT=$HOME/apps/src/boost/boost_1_71_0
 export BOOST_HOME=$BOOST_ROOT
 export LD_LIBRARY_PATH=$BOOST_ROOT/stage/lib:$LD_LIBRARY_PATH
 
 # Pahole utility
 export PAHOLE_HOME=$HOME/apps/pahole
 export PATH=$PAHOLE_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PAHOLE_HOME/lib
 
 # LCOV
 export LCOV_HOME=$HOME/apps/lcov
 export PATH=$LCOV_HOME/bin:$PATH
+
+# Node
+export NODEJS_HOME=$HOME/apps/node
+export PATH=$NODEJS_HOME/bin:$PATH
+
+# CppInsights
+export CPPINSIGHTS=$HOME/apps/cppinsights
+export PATH=$CPPINSIGHTS/bin:$PATH

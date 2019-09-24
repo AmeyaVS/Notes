@@ -233,3 +233,5 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 " Refer here for more info:
 " http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 set pastetoggle=<F2>
+
+set tabpagemax=20
