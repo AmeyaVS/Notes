@@ -96,3 +96,6 @@ export PATH=$CPPINSIGHTS/bin:$PATH
 
 # Catch2
 export CATCH2_HOME=$HOME/apps/catch2
+
+# doctest
+export DOCTEST_HOME=$HOME/apps/doctest

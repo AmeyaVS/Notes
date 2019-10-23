@@ -11,9 +11,12 @@ set (CMAKE_CXX_STANDARD ${SystemC_CXX_STANDARD})
 
 find_package(GTest REQUIRED)
 
-enable_testing()
+include(CTest)
 
 add_executable(systemc_gtest main.cpp)
-target_link_libraries(systemc_gtest ${GTEST_LIBRARIES} SystemC::systemc )
-target_include_directories(systemc_gtest PRIVATE ${GTEST_INCLUDE_DIRS})
-add_test(AllTestsInSystemCGtest systemc_gtest)
+
+target_link_libraries(${PROJECT_NAME} GTest::GTest SystemC::systemc )
+
+add_test(AllTestsInSystemCGtest ${PROJECT_NAME})
+
+gtest_discover_tests(${PROJECT_NAME})
