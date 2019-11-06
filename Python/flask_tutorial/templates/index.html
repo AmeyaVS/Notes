@@ -7,6 +7,12 @@
             <p>Hello!</p>
             <p>{{content}}</p>
             <p>{{r}}</p>
+            {% for i in range(0, 10) %}
+                {% if i % 2 == 1 %}
+                    <p>{{i}}</p>
+                {% endif %}
+                <p>Hello</p>
+            {% endfor %}
         </body>
     </head>
 </html>
