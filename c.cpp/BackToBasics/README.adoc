@@ -65,3 +65,7 @@ References:
 === **(S)**ingle Responsibility Principle
 
 Examples available link:02.SOLID.Design.Principle/01.SingleResponsibilityPrinciple/README.adoc[here].
+
+=== **(O)**pen Closed Principle
+
+Examples available link:02.SOLID.Design.Principle/02.Open-ClosedPrinciple/README.adoc[here].

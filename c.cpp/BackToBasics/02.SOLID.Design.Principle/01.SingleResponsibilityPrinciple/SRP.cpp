@@ -6,8 +6,6 @@
 
 using namespace std;
 
-class PersistenceManager;
-
 class Journal
 {
     string title;
@@ -24,6 +22,7 @@ class Journal
     // persistance is a separate concern
     void save(const string& filename);
 
+    // Persistence Can be handled in separate class
     friend class PersistenceManager;
 };
 
