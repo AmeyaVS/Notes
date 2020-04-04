@@ -1,0 +1,67 @@
+= Collection of Sources from Design Pattern Course
+
+:sectnums:
+:toc:
+:toclevels: 4
+:toc-title:
+:keywords: C++, Design Patterns
+
+== Introduction
+
+References from:
+
+* Design Patterns Elements of Resusable Object-Oriented Software (Gang-of-Four)
+
+.Possible Structure for examples
+|===
+
+3+^| SOLID Design Principles
+
+^| Creational ^| Structural ^| Behavioral
+
+|===
+
+=== Creational
+
+* Builder
+* Factories
+** Abstract Factory
+** Factory Method
+* Prototype
+* Singleton
+
+=== Structural
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+
+=== Behavioral
+* Chain of Responsibility
+* Command
+* Interpreter
+* Iterator
+* Mediator
+* Memento
+* Observer
+* State
+* Strategy
+* Template Method
+* Visitor
+
+== SOLID Design Principle
+
+Design principles introduced by Robert C. Martin
+
+References:
+
+* Agile Software Development Principles, Patterns, and Practices by Robert C. Martin
+* Agile Principles, Patterns, and Practices in C# by Robert C. Martin, and Micah Martin
+
+
+=== **(S)**ingle Responsibility Principle
+
+Examples available link:02.SOLID.Design.Principle/01.SingleResponsibilityPrinciple/README.adoc[here].
