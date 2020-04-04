@@ -38,7 +38,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source ~/.local/bin/virtualenvwrapper.sh
 
 # SystemC
-export SYSTEMC_HOME=$HOME/apps/systemc-2.3.3
+export SYSTEMC_HOME=$HOME/apps/systemc
 export LD_LIBRARY_PATH=$SYSTEMC_HOME/lib64:$SYSTEMC_HOME/lib
 
 # Sphinx Documentation
