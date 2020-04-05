@@ -69,3 +69,15 @@ Examples available link:02.SOLID.Design.Principle/01.SingleResponsibilityPrincip
 === **(O)**pen Closed Principle
 
 Examples available link:02.SOLID.Design.Principle/02.Open-ClosedPrinciple/README.adoc[here].
+
+=== **(L)**iskov Substitution Principle
+
+Examples available link:02.SOLID.Design.Principle/03.LiskovSubstitutionPrinciple/README.adoc[here].
+
+=== **(I)**nterface Segregation Principle
+
+Examples available link:02.SOLID.Design.Principle/04.InterfaceSegregationPrinciple/README.adoc[here].
+
+=== **(D)**ependency Inversion Principle
+
+Examples available link:02.SOLID.Design.Principle/05.DependencyInversionPrinciple/README.adoc[here].
