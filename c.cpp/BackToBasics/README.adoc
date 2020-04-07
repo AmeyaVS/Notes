@@ -81,3 +81,16 @@ Examples available link:02.SOLID.Design.Principle/04.InterfaceSegregationPrincip
 === **(D)**ependency Inversion Principle
 
 Examples available link:02.SOLID.Design.Principle/05.DependencyInversionPrinciple/README.adoc[here].
+
+
+== Builder
+
+* Some objects are simple and can be created in a single constructor call
+* Other Objects require a lot of ceremony to create
+* Having an object with 10 constructor arguments is not productive
+* Instead, opt for piecewise construction
+* Builder provides an API for constructing an object step-by-step
+
+=== Creational Builder Intro
+
+Example available link:03.Builder/01.BuilderIntro/README.adoc[here].

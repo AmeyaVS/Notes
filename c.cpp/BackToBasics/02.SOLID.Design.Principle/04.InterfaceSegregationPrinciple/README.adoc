@@ -7,3 +7,4 @@
 **Note:**
 
 * Similar to decorator pattern
+* Also known as: **YAGNI** - _"You Ain't Going to Need it"_
