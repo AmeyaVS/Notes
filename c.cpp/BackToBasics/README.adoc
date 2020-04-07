@@ -94,3 +94,11 @@ Examples available link:02.SOLID.Design.Principle/05.DependencyInversionPrincipl
 === Creational Builder Intro
 
 Example available link:03.Builder/01.BuilderIntro/README.adoc[here].
+
+=== Groovy Style Builder
+
+Example available link:03.Builder/02.GroovyStyleBuilder/README.adoc[here].
+
+=== Builder Facets
+
+Example available link:03.Builder/03.BuilderFacets/README.adoc[here].

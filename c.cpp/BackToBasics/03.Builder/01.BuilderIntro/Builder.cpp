@@ -21,7 +21,7 @@ struct HtmlElement
           text(text)
     {}
 
-    string str(int indent = 0) const
+    string str(size_t indent = 0) const
     {
         ostringstream oss;
         string i(indent_size*indent, ' ');
