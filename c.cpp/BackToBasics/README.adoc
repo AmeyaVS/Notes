@@ -102,3 +102,32 @@ Example available link:03.Builder/02.GroovyStyleBuilder/README.adoc[here].
 === Builder Facets
 
 Example available link:03.Builder/03.BuilderFacets/README.adoc[here].
+
+== Factories
+
+Factory Method and Abstract Factory
+
+Object creation (non-piecewise, unlike Builder) can be outsourced to
+* A separate function (Factory Method)
+* That may exist in a separate class (Factory)
+* Can create hierarchy of factories with Abstract Factory
+
+Or
+
+A component responsible solely for the wholesale (not piecewise) creation of objects.
+
+=== Point Example
+
+Sample Example on not how to write code, available link:04.Factories/01.PointExample/README.adoc[here].
+
+=== Factory Method
+
+Example available at link:04.Factories/02.FactoryMethod/README.adoc[here].
+
+=== Factory Class
+
+Example available at link:04.Factories/03.FactoryClass/README.adoc[here].
+
+=== Inner Factory
+
+Example available at link:04.Factories/04.InnerFactory/README.adoc[here].

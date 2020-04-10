@@ -4,3 +4,4 @@ project(BackToBasics)
 
 add_subdirectory(02.SOLID.Design.Principle)
 add_subdirectory(03.Builder)
+add_subdirectory(04.Factories)
