@@ -41,15 +41,15 @@ struct HtmlElement
     }
 
     // This does not work since the unique_ptr scope resides within this function itself;
-    /*static unique_ptr<HtmlBuilder> build(string root_name)
+    static unique_ptr<HtmlBuilder> build(const string &root_name)
     {
         return make_unique<HtmlBuilder>(root_name);
-    }*/
+    }
 };
 
 struct HtmlBuilder
 {
-    HtmlBuilder(string root_name)
+    HtmlBuilder(const string &root_name)
     {
         root.name = root_name;
     }
@@ -112,10 +112,10 @@ int main()
     builder.add_child("li", "hello").add_child("li", "world");
     cout << builder.str() << endl;
 
-    //auto builder2 = HtmlElement::build("ul")
-    //                ->add_child_2("li", "hello")
-    //                ->add_child_2("li", "world");
-    //cout << builder2->str() << endl;
+    auto builder2 = HtmlElement::build("ul");
+    builder2->add_child_2("li", "hello")
+            ->add_child_2("li", "world");
+    cout << builder2->str() << endl;
 
     return 0;
 }
