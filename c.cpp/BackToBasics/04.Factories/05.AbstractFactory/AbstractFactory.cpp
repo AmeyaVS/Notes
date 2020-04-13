@@ -30,5 +30,9 @@ int main()
     DrinkFactory df;
 
     auto c = df.make_drink("coffee");
+
+    DrinkWithVolumeFactory dv;
+    dv.make_drink("tea");
+    dv.make_drink("coffee");
     return 0;
 }
