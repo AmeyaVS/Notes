@@ -131,3 +131,7 @@ Example available at link:04.Factories/03.FactoryClass/README.adoc[here].
 === Inner Factory
 
 Example available at link:04.Factories/04.InnerFactory/README.adoc[here].
+
+=== Abstract Factory
+
+Example available at link:04.Factories/05.AbstractFactory/README.adoc[here].
