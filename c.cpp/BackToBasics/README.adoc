@@ -122,16 +122,26 @@ Sample Example on not how to write code, available link:04.Factories/01.PointExa
 
 === Factory Method
 
-Example available at link:04.Factories/02.FactoryMethod/README.adoc[here].
+Example available link:04.Factories/02.FactoryMethod/README.adoc[here].
 
 === Factory Class
 
-Example available at link:04.Factories/03.FactoryClass/README.adoc[here].
+Example available link:04.Factories/03.FactoryClass/README.adoc[here].
 
 === Inner Factory
 
-Example available at link:04.Factories/04.InnerFactory/README.adoc[here].
+Example available link:04.Factories/04.InnerFactory/README.adoc[here].
 
 === Abstract Factory
 
-Example available at link:04.Factories/05.AbstractFactory/README.adoc[here].
+Example available link:04.Factories/05.AbstractFactory/README.adoc[here].
+
+== Prototype
+
+A partially or fully initialized object that you copy(clone) and make use of.
+
+=== Record Keeping
+
+Before introduction to Prototype Design Pattern.
+
+Example available link:05.Prototype/01.RecordKeeping/README.adoc[here].
