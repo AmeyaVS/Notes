@@ -151,3 +151,9 @@ Example available link:05.Prototype/01.RecordKeeping/README.adoc[here].
 Introduction to Prototype Factory Design Pattern.
 
 Example available link:05.Prototype/03.PrototypeFactory/README.adoc[here].
+
+=== Prototype Via Serialization
+
+Introduction to Prototype Via Serialization.
+
+Example available link:05.Prototype/04.PrototypeViaSerialization/README.adoc[here].

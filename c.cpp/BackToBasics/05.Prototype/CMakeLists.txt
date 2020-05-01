@@ -4,3 +4,5 @@ project(05.Prototype)
 
 add_subdirectory(01.RecordKeeping)
 add_subdirectory(03.PrototypeFactory)
+add_subdirectory(04.PrototypeViaSerialization)
+add_subdirectory(Exercise)
