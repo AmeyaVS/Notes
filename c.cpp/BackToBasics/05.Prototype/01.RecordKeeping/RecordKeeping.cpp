@@ -43,6 +43,11 @@ struct Contact
         , address{new Address{*other.address}}
     {}
 
+    ~Contact()
+    {
+        delete address;
+    }
+
     friend ostream &operator<<(ostream &os, const Contact &contact)
     {
         os << "name: " << contact.name
