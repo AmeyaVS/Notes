@@ -145,3 +145,9 @@ A partially or fully initialized object that you copy(clone) and make use of.
 Before introduction to Prototype Design Pattern.
 
 Example available link:05.Prototype/01.RecordKeeping/README.adoc[here].
+
+=== Prototype Factory
+
+Introduction to Prototype Factory Design Pattern.
+
+Example available link:05.Prototype/03.PrototypeFactory/README.adoc[here].

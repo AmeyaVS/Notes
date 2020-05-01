@@ -1,4 +1,4 @@
-= Example Code for Prototype Design Pattern Implementation
+= Example Code for Prototype Factory Implementation
 
 * **Prerequisites:**
 ** **CMake:** Greater than 3.10
