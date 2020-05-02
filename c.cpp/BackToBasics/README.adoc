@@ -157,3 +157,13 @@ Example available link:05.Prototype/03.PrototypeFactory/README.adoc[here].
 Introduction to Prototype Via Serialization.
 
 Example available link:05.Prototype/04.PrototypeViaSerialization/README.adoc[here].
+
+== Singleton
+
+A component which is instantiated only once.
+
+=== Singleton Implementation
+
+Introduction to Singleton Design Pattern.
+
+Example available link:06.Singleton/01.SingletonImplementation/README.adoc[here].
