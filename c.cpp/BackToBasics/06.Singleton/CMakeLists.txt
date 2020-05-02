@@ -4,3 +4,4 @@ project(06.Singleton)
 
 add_subdirectory(01.SingletonImplementation)
 add_subdirectory(02.ProblemWithSingletonImplementation)
+add_subdirectory(03.SingletonInDependencyInjection)

@@ -167,3 +167,15 @@ A component which is instantiated only once.
 Introduction to Singleton Design Pattern.
 
 Example available link:06.Singleton/01.SingletonImplementation/README.adoc[here].
+
+=== Problem with Singleton
+
+Issues with Singleton Implementation
+
+Example available link:06.Singleton/02.ProblemWithSingletonImplementation/README.adoc[here].
+
+=== Singleton in Dependency Injection
+
+Problem in Dependency Injection
+
+Example available link:06.Singleton/03.SingletonInDependencyInjection/README.adoc[here].
