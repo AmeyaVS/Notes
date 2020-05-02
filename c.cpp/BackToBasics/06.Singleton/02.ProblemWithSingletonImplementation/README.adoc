@@ -1,0 +1,7 @@
+= Example Code for Problem With Singleton Design Pattern Implementation
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+
+**Note:** Copy the file `capitals.txt` from where the executable would be executing from.
