@@ -3,4 +3,4 @@
 * **Prerequisites:**
 ** **CMake:** Greater than 3.10
 ** **C\++ Compiler:** Supporting C++17
-** **Libraries:** link:https://boost-experimental.github.io/di/[Boost.DI]
+** **Libraries:** link:https://boost-experimental.github.io/di/[Boost.DI], Boost
