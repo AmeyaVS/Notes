@@ -62,6 +62,8 @@ int main()
     auto logger = make_shared<ConsoleLogger>();
     auto c = make_shared<Car>(make_unique<Engine>(), logger);
 
+    cout << *c << endl;
+
     auto injector = di::make_injector(
         di::bind<ILogger>().to<ConsoleLogger>()
     );

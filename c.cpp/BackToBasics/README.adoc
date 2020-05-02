@@ -185,3 +185,9 @@ Example available link:06.Singleton/03.SingletonInDependencyInjection/README.ado
 Example for Singleton Lifetime in Dependency Injection Container
 
 Example available link:06.Singleton/04.SingletonLifetimeInDIContainer/README.adoc[here].
+
+=== Monostate Design Pattern
+
+This example is a bad implementation for a Singleton Pattern.
+
+Example available link:06.Singleton/05.Monostate/README.adoc[here].
