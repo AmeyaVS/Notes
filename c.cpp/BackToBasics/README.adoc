@@ -191,3 +191,9 @@ Example available link:06.Singleton/04.SingletonLifetimeInDIContainer/README.ado
 This example is a bad implementation for a Singleton Pattern.
 
 Example available link:06.Singleton/05.Monostate/README.adoc[here].
+
+=== Multiton
+
+Example for Multiton Design Pattern
+
+Example available link:06.Singleton/06.Multiton/README.adoc[here].
