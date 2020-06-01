@@ -197,3 +197,14 @@ Example available link:06.Singleton/05.Monostate/README.adoc[here].
 Example for Multiton Design Pattern
 
 Example available link:06.Singleton/06.Multiton/README.adoc[here].
+
+== Adapter Design Pattern
+
+Getting the interface you want from the interface you have.
+e.g.: Power Interface/Plug type adapter.
+
+=== Shape Demo
+
+Example for Shape Demo
+
+Example available link:07.Adapter/01.ShapeDemo/README.adoc[here].
