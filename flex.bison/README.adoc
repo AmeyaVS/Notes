@@ -1,0 +1,4 @@
+# README
+
+Exploration on using Flex and Bison for parsing and compiler creation.
+
