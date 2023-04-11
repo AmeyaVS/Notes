@@ -31,7 +31,7 @@ ex1d: $(DEPS1)
 
 ex1e: $(DEPS1)
 	$(cmt) "The properties of the executable ex1.exe"
-	file ex1.exe
+	file ex1
 
 clean: 
-	rm -f *.o ex1.exe ex1.i ex1.s
+	rm -f *.o ex1 ex1.i ex1.s
