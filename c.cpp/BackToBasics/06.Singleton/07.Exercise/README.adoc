@@ -1,0 +1,6 @@
+= Exercise Code for Singleton Design Pattern
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+** **Libraries:** GTest

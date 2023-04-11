@@ -1,0 +1,8 @@
+= Example Code for Point Factory
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+
+This example code is not the way one should actually write code.
+This would lead to unmaintainable pieces of code.

@@ -1,0 +1,8 @@
+= Example Code for Singleton In Dependency Injection
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+** **Libraries:** Boost, GoogleTest
+
+**Note:** Copy the file `capitals.txt` from where the executable would be executing from.

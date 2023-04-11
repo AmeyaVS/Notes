@@ -1,0 +1,9 @@
+= Example Code for Liskov Substitution Principle
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+
+**Note:**
+
+* **DO NOT** Implement Code like in this example

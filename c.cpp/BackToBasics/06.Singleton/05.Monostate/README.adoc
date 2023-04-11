@@ -1,0 +1,8 @@
+= Example Code for Monostate Design Pattern
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+** **Libraries:**
+
+**NOTE:** This implementation is a bad idea, don't ever use it in code, only for demonstration.

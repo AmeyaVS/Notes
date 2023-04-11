@@ -1,0 +1,210 @@
+= Collection of Sources from Design Pattern Course
+
+:sectnums:
+:toc:
+:toclevels: 4
+:toc-title:
+:keywords: C++, Design Patterns
+
+== Introduction
+
+References from:
+
+* Design Patterns Elements of Resusable Object-Oriented Software (Gang-of-Four)
+
+.Possible Structure for examples
+|===
+
+3+^| SOLID Design Principles
+
+^| Creational ^| Structural ^| Behavioral
+
+|===
+
+=== Creational
+
+* Builder
+* Factories
+** Abstract Factory
+** Factory Method
+* Prototype
+* Singleton
+
+=== Structural
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+
+=== Behavioral
+* Chain of Responsibility
+* Command
+* Interpreter
+* Iterator
+* Mediator
+* Memento
+* Observer
+* State
+* Strategy
+* Template Method
+* Visitor
+
+== SOLID Design Principle
+
+Design principles introduced by Robert C. Martin
+
+References:
+
+* Agile Software Development Principles, Patterns, and Practices by Robert C. Martin
+* Agile Principles, Patterns, and Practices in C# by Robert C. Martin, and Micah Martin
+
+
+=== **(S)**ingle Responsibility Principle
+
+Examples available link:02.SOLID.Design.Principle/01.SingleResponsibilityPrinciple/README.adoc[here].
+
+=== **(O)**pen Closed Principle
+
+Examples available link:02.SOLID.Design.Principle/02.Open-ClosedPrinciple/README.adoc[here].
+
+=== **(L)**iskov Substitution Principle
+
+Examples available link:02.SOLID.Design.Principle/03.LiskovSubstitutionPrinciple/README.adoc[here].
+
+=== **(I)**nterface Segregation Principle
+
+Examples available link:02.SOLID.Design.Principle/04.InterfaceSegregationPrinciple/README.adoc[here].
+
+=== **(D)**ependency Inversion Principle
+
+Examples available link:02.SOLID.Design.Principle/05.DependencyInversionPrinciple/README.adoc[here].
+
+
+== Builder
+
+* Some objects are simple and can be created in a single constructor call
+* Other Objects require a lot of ceremony to create
+* Having an object with 10 constructor arguments is not productive
+* Instead, opt for piecewise construction
+* Builder provides an API for constructing an object step-by-step
+
+=== Creational Builder Intro
+
+Example available link:03.Builder/01.BuilderIntro/README.adoc[here].
+
+=== Groovy Style Builder
+
+Example available link:03.Builder/02.GroovyStyleBuilder/README.adoc[here].
+
+=== Builder Facets
+
+Example available link:03.Builder/03.BuilderFacets/README.adoc[here].
+
+== Factories
+
+Factory Method and Abstract Factory
+
+Object creation (non-piecewise, unlike Builder) can be outsourced to
+* A separate function (Factory Method)
+* That may exist in a separate class (Factory)
+* Can create hierarchy of factories with Abstract Factory
+
+Or
+
+A component responsible solely for the wholesale (not piecewise) creation of objects.
+
+=== Point Example
+
+Sample Example on not how to write code, available link:04.Factories/01.PointExample/README.adoc[here].
+
+=== Factory Method
+
+Example available link:04.Factories/02.FactoryMethod/README.adoc[here].
+
+=== Factory Class
+
+Example available link:04.Factories/03.FactoryClass/README.adoc[here].
+
+=== Inner Factory
+
+Example available link:04.Factories/04.InnerFactory/README.adoc[here].
+
+=== Abstract Factory
+
+Example available link:04.Factories/05.AbstractFactory/README.adoc[here].
+
+== Prototype
+
+A partially or fully initialized object that you copy(clone) and make use of.
+
+=== Record Keeping
+
+Before introduction to Prototype Design Pattern.
+
+Example available link:05.Prototype/01.RecordKeeping/README.adoc[here].
+
+=== Prototype Factory
+
+Introduction to Prototype Factory Design Pattern.
+
+Example available link:05.Prototype/03.PrototypeFactory/README.adoc[here].
+
+=== Prototype Via Serialization
+
+Introduction to Prototype Via Serialization.
+
+Example available link:05.Prototype/04.PrototypeViaSerialization/README.adoc[here].
+
+== Singleton
+
+A component which is instantiated only once.
+
+=== Singleton Implementation
+
+Introduction to Singleton Design Pattern.
+
+Example available link:06.Singleton/01.SingletonImplementation/README.adoc[here].
+
+=== Problem with Singleton
+
+Issues with Singleton Implementation
+
+Example available link:06.Singleton/02.ProblemWithSingletonImplementation/README.adoc[here].
+
+=== Singleton in Dependency Injection
+
+Problem in Dependency Injection
+
+Example available link:06.Singleton/03.SingletonInDependencyInjection/README.adoc[here].
+
+=== Singleton Lifetime in Dependency Injection(DI) Container
+
+Example for Singleton Lifetime in Dependency Injection Container
+
+Example available link:06.Singleton/04.SingletonLifetimeInDIContainer/README.adoc[here].
+
+=== Monostate Design Pattern
+
+This example is a bad implementation for a Singleton Pattern.
+
+Example available link:06.Singleton/05.Monostate/README.adoc[here].
+
+=== Multiton
+
+Example for Multiton Design Pattern
+
+Example available link:06.Singleton/06.Multiton/README.adoc[here].
+
+== Adapter Design Pattern
+
+Getting the interface you want from the interface you have.
+e.g.: Power Interface/Plug type adapter.
+
+=== Shape Demo
+
+Example for Shape Demo
+
+Example available link:07.Adapter/01.ShapeDemo/README.adoc[here].

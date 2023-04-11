@@ -1,0 +1,10 @@
+= Example Code for Interface Segregation Principle
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+
+**Note:**
+
+* Similar to decorator pattern
+* Also known as: **YAGNI** - _"You Ain't Going to Need it"_

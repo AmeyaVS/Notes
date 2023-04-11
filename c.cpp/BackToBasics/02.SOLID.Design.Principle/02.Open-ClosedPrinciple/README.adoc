@@ -1,0 +1,9 @@
+= Example Code for Open-Closed Principle
+
+* **Prerequisites:**
+** **CMake:** Greater than 3.10
+** **C\++ Compiler:** Supporting C++17
+
+**Note:**
+
+* Specification Pattern/Enterprise Pattern
