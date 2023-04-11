@@ -1,5 +1,14 @@
 #ifndef    RLEX_H
-#include "stl.h"
+#include <cstring>
+#include <string>
+#include <set>
+#include <iostream>
+
+
+using std::set;
+using std::string;
+using std::cout;
+using std::endl;
 
 /*------------ nfa.h begins ---------------*/
 
@@ -83,7 +92,7 @@ private:                       /* Data */
   /* Added for rlex2.cc */
 
 public:                        /* methods */
-  int rlex::interpret_nfa (char *str,int verbose=0);
+  int interpret_nfa (char *str,int verbose=0);
 
 private:                       /* methods */
   void print_set (STATE_SET * s);
@@ -146,9 +155,9 @@ private:
 
 public:
 
-  void rlex::minimise_dfa (int verbose=0);
-  void rlex::print_min_dfa_tree ();
-  int rlex::interpret_min_dfa (char *str);
+  void minimise_dfa (int verbose=0);
+  void print_min_dfa_tree ();
+  int interpret_min_dfa (char *str);
 
 private:
 

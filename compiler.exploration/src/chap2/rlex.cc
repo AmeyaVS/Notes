@@ -1,9 +1,12 @@
-#include <stdio.h>
-#include <malloc.h>
-#include <ctype.h>
+#include <cstdio>
 #include <iostream>
+#include <algorithm>
+#include <iterator>
 #include "rlex.h"
 
+using std::cout;
+using std::endl;
+using std::ostream_iterator;
 
 /*------------ rlex1.cc begins ---------------*/
 rlex::rlex ()

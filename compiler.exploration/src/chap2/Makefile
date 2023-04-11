@@ -211,4 +211,4 @@ listing: words.l
 		
 
 clean: 
-	rm -f *.o ex[1-6] ex[1-6]*.exe  lex_analyzer.exe *.debug eng_lex_analyzer.exe trans.exe lex.yy.c lexer.exe rlex.exe out.c
+	rm -f *.o ex[1-6] ex[1-6] lex_analyzer *.debug eng_lex_analyzer trans lex.yy.c lexer rlex out.c
