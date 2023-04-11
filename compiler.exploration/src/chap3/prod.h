@@ -1,5 +1,4 @@
 #ifndef	PROD_H
-#include "stl.h"
 #include "symbol.h"
 #include "parse_tab.h"
 

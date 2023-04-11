@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "stl.h"
+#include <cstring>
+#include <stack>
 #include "c-stmt-hdr.h"
 #include "parse_tab.h"
+
+using std::stack;
 
 extern "C"
 {

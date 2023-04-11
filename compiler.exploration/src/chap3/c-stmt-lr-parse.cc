@@ -2,11 +2,12 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <iostream>
-#include "stl.h"
 #include "c-stmt-hdr.h"
 #include "prod_entry.h"
 #include "c-stmt-lr-parse.h"
+#include <stack>
 
+using std::stack;
 
 int yyparse ();
 int get_next_token ();

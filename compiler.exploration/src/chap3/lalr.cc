@@ -1,5 +1,6 @@
 #include "lalr.h"
 #include "c-stmt-lr-parse.h"
+#include <algorithm>
 
 void
 lalr:: condense_can_coll()

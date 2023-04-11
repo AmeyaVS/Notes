@@ -1,14 +1,17 @@
 #ifndef	GRAMMAR_H
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 #include <ctype.h>
 
-#include "stl.h"
 #include "symbol.h"
 #include "prod.h"
+#include <cstring>
+#include <map>
 //#include "item.h"
 
+using std::string;
+using std::map;
 
 #define MAX_LINE 400
 #define MAX_FILE_NAME 400

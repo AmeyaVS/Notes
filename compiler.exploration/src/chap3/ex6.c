@@ -4,7 +4,7 @@
 
 extern char yytext[];
 extern int column;
-int yydebug = 1;
+extern int yydebug;
 char input_str[500];
 
 int
@@ -19,6 +19,7 @@ yyerror (char *s)
 int
 main (int argc, char **argv)
 {
+   yydebug = 1;
    int yyparse ();
    int result;
 

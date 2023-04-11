@@ -637,7 +637,6 @@ prod::make_pentry ()
 
 /* symbol.cc */
 #include <stdio.h>
-#include "stl.h"
 #include "symbol.h"
 
 #define	NON_TERMINAL 1

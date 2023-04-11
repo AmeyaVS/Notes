@@ -1,6 +1,12 @@
 #ifndef	SYMBOL_H
-#include "stl.h"
 #include <string>
+#include <cstring>
+#include <set>
+#include <vector>
+
+using std::string;
+using std::set;
+using std::vector;
 
 #define	NON_TERMINAL 1
 #define	TERMINAL 0

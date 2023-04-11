@@ -1,5 +1,6 @@
 #include "slr.h"
 #include "c-stmt-lr-parse.h"
+#include <algorithm>
 
 prod_entry prod_table[MAX_PROD_TAB_SIZE];
 int action_table[MAX_TAB_SIZE][MAX_TAB_SIZE];

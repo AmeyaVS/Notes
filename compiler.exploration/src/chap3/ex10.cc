@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <iostream>
-#include "stl.h"
 #include "canonical_lr.h"
 
 char input_str[200];

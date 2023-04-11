@@ -4,10 +4,10 @@
 
 char input_str[500];
 int done = 0;
+extern int yyparse();
 int
 main (int argc, char **argv)
 {
-   int yyparse ();
    int result;
 
    if (argc != 2) {

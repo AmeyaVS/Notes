@@ -302,5 +302,5 @@ listing : c-stmt-gram.y
 	mklist c-stmt-gram.y listing3.1.rtf
 
 clean	:
-	rm -f y.tab.h 	c-small-gram.c c-small-gram.h c-small-gram.output c-small-lex.c c-stmt-lex.c op-prec-lex.c c-stmt-gram.output c-stmt-gram.c c-stmt-gram.h c-stmt-bot-up-gram.h c-stmt-bot-up-gram.output c-stmt-bot-up-gram.c y.output *.o *~ core c-stmt ex1 ex2 ex3 ex4 ex5 ex6 ex7 ex1.exe ex2.exe ex3.exe ex4.exe ex5.exe ex6.exe ex7.exe ex8 ex8.exe ex9 ex9.exe ex10 ex10.exe ex11.exe ex11 ex12 ex12.exe syn_analyzer.exe
+	rm -f y.tab.h 	c-small-gram.c c-small-gram.h c-small-gram.output c-small-lex.c c-stmt-lex.c op-prec-lex.c c-stmt-gram.output c-stmt-gram.c c-stmt-gram.h c-stmt-bot-up-gram.h c-stmt-bot-up-gram.output c-stmt-bot-up-gram.c y.output *.o *~ core c-stmt ex1 ex2 ex3 ex4 ex5 ex6 ex7 ex1 ex2 ex3 ex4 ex5 ex6 ex7 ex8 ex8 ex9 ex9 ex10 ex10 ex11 ex11 ex12 ex12 syn_analyzer
 

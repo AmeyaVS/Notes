@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <iostream>
-#include "stl.h"
+#include <deque>
+#include <stack>
 #include "op-prec.h"
+
+using std::deque;
+using std::stack;
+using std::cout;
 
 #define	ERR1	-1
 #define	ERR2	-2
