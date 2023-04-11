@@ -1,0 +1,5 @@
+c_statement : IDENTIFIER EQ_TO_OP c_expression ;
+c_expression : CONSTANT
+c_expression : IDENTIFIER
+c_expression : c_expression OPERATOR CONSTANT
+c_expression : c_expression OPERATOR IDENTIFIER
