@@ -1,3 +1,6 @@
+# Base URL Reference:
+# mhhe.com/raghavan/pcd
+# https://highered.mheducation.com/sites/0070144710/information_center_view0/
 https://highered.mheducation.com/sites/dl/free/0070144710/800310/src_17_aug_2009.zip
 https://highered.mheducation.com/sites/dl/free/0070144710/800312/Preface.pdf
 https://highered.mheducation.com/sites/dl/free/0070144710/800312/Visual_Walkthrough.pdf
