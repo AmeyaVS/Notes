@@ -2,6 +2,7 @@
 
 <nav>
     {% for menu_item in ["home", "resultsextended"] %}
-      <a href="{{ url_for(menu_item) }}">{{ menu_item|upper }}</a>
+      {#<a href="{{ url_for(menu_item) }}">{{ menu_item|upper }}</a>#}
+      {{ macros.nav_link(menu_item) }}
     {% endfor %}
 </nav>
