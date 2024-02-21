@@ -145,4 +145,8 @@ pip install --user \
 ## CTypes Example
 
 * Ctypes library for calling `C/C++` API's from python.
-* Simple example available in [ctypes]() directory.
+* Simple example available in [ctypes](ctypes) directory.
+* [flask_tutorial](flask_tutorial): An exploration of Flask Tool.
+* [Jinja2](Jinja2): An exploration of Templating Engine can be used along with Flask
+* [Mako](Mako): An exploration of another Templating Engine.
+
