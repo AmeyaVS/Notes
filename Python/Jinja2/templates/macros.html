@@ -16,3 +16,14 @@
     <a href="{{ request.path }}?mode=dark">Switch to Dark Mode</a>
   {% endif %}
 {% endmacro %}
+
+{% macro add_badge(student, students) %}
+  {% set high_score = students|map(attribute="score")|max %}
+  {% if student.score == high_score %}
+    ⭐️
+  {% elif student.score > 80 %}
+    🙂
+  {% else %}
+    🙁
+  {% endif %}
+{% endmacro %}
