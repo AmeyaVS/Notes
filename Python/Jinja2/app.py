@@ -27,5 +27,14 @@ def results():
     }
     return render_template("results.html", **context)
 
+@app.route("/resultsextended")
+def resultsextended():
+    context = {
+        "students": students,
+        "test_name":  test_name,
+        "max_score": max_score,
+    }
+    return render_template("results_extended.html", **context)
+
 if __name__ == "__main__":
     app.run(debug=True)
