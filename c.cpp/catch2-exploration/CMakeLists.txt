@@ -12,7 +12,7 @@ find_package(Catch2 REQUIRED)
 
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_link_libraries(${PROJECT_NAME} Catch2::Catch2)
+target_link_libraries(${PROJECT_NAME} Catch2::Catch2WithMain)
 
 include(CTest)
 include(Catch)

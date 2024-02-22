@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #define  CATCH_CONFIG_CONSOLE_WIDTH 150
-#include "catch2/catch.hpp"
+#include "catch2/catch_test_macros.hpp"
 
 extern std::string fizzbuzz(const int number);
 

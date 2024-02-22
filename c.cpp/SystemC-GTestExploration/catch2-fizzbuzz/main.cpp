@@ -2,7 +2,7 @@
 // This tells Catch to provide a main() - only do this in one cpp file
 // This macro is required on Linux OS for some reason
 #define CATCH_CONFIG_CONSOLE_WIDTH 150
-#include "catch2/catch.hpp"
+#include "catch2/catch_test_macros.hpp"
 
 #include "fizzbuzz.h"
 
