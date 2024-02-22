@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ipxact:component xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:kactus2="http://kactus2.cs.tut.fi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.accellera.org/XMLSchema/IPXACT/1685-2014 http://www.accellera.org/XMLSchema/IPXACT/1685-2014/index.xsd">
+    <ipxact:vendor>Stage0</ipxact:vendor>
+    <ipxact:library>ip</ipxact:library>
+    <ipxact:name>CRCA</ipxact:name>
+    <ipxact:version>1.0</ipxact:version>
+    <ipxact:model>
+        <ipxact:ports>
+            <ipxact:port>
+                <ipxact:name>data_in</ipxact:name>
+                <ipxact:wire allLogicalDirectionsAllowed="false">
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>crca_out</ipxact:name>
+                <ipxact:wire allLogicalDirectionsAllowed="false">
+                    <ipxact:direction>out</ipxact:direction>
+                    <ipxact:vectors>
+                        <ipxact:vector>
+                            <ipxact:left>uuid_f6adc5d2_47db_42c7_b012_72916f741b64-1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:vector>
+                    </ipxact:vectors>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>crca_out_rev</ipxact:name>
+                <ipxact:wire allLogicalDirectionsAllowed="false">
+                    <ipxact:direction>out</ipxact:direction>
+                    <ipxact:vectors>
+                        <ipxact:vector>
+                            <ipxact:left>uuid_f6adc5d2_47db_42c7_b012_72916f741b64-1</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:vector>
+                    </ipxact:vectors>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>clk</ipxact:name>
+                <ipxact:wire allLogicalDirectionsAllowed="false">
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+            <ipxact:port>
+                <ipxact:name>rstn</ipxact:name>
+                <ipxact:wire allLogicalDirectionsAllowed="false">
+                    <ipxact:direction>in</ipxact:direction>
+                </ipxact:wire>
+            </ipxact:port>
+        </ipxact:ports>
+    </ipxact:model>
+    <ipxact:parameters>
+        <ipxact:parameter kactus2:usageCount="2" maximum="64" minimum="8" parameterId="uuid_f6adc5d2_47db_42c7_b012_72916f741b64" type="string" resolve="immediate">
+            <ipxact:name>CRC_WIDTH</ipxact:name>
+            <ipxact:value>16</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter kactus2:usageCount="1" parameterId="uuid_9289533c_cc82_42f7_a52e_2b3f9c666d30" type="string" resolve="immediate">
+            <ipxact:name>P2</ipxact:name>
+            <ipxact:value>P1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter kactus2:usageCount="1" parameterId="uuid_50cfe46d_771d_4949_b2f5_40dc69ab0056" type="string" resolve="immediate">
+            <ipxact:name>P1</ipxact:name>
+            <ipxact:value>8</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="uuid_ffc53805_23b1_40d0_8eb6_9f18596563b6" type="string" resolve="immediate">
+            <ipxact:name>P3</ipxact:name>
+            <ipxact:value>uuid_50cfe46d_771d_4949_b2f5_40dc69ab0056 + uuid_9289533c_cc82_42f7_a52e_2b3f9c666d30</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter kactus2:usageCount="1" parameterId="uuid_35b308bf_b866_4fa1_b57f_cfb426f2b833" type="string" resolve="immediate">
+            <ipxact:name>parameter_2</ipxact:name>
+            <ipxact:value>100</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter kactus2:usageCount="1" parameterId="uuid_59eb1737_75f2_4d51_ac8d_8576dc994a15" type="string" resolve="immediate">
+            <ipxact:name>parameter_1</ipxact:name>
+            <ipxact:value>uuid_35b308bf_b866_4fa1_b57f_cfb426f2b833</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter kactus2:usageCount="1" parameterId="uuid_166eb177_ec2d_4ff4_b293_905f4cb6cc85" type="string" resolve="immediate">
+            <ipxact:name>parameter_0</ipxact:name>
+            <ipxact:value>uuid_59eb1737_75f2_4d51_ac8d_8576dc994a15</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="uuid_df733348_e676_4f3a_9968_81633cd0e9ff" type="string" resolve="immediate">
+            <ipxact:name>parameter_00</ipxact:name>
+            <ipxact:value>uuid_166eb177_ec2d_4ff4_b293_905f4cb6cc85</ipxact:value>
+        </ipxact:parameter>
+    </ipxact:parameters>
+    <ipxact:vendorExtensions>
+        <kactus2:author>ameyavs</kactus2:author>
+        <kactus2:version>4,0,131,0</kactus2:version>
+        <kactus2:kts_attributes>
+            <kactus2:kts_productHier>IP</kactus2:kts_productHier>
+            <kactus2:kts_implementation>HW</kactus2:kts_implementation>
+            <kactus2:kts_firmness>Mutable</kactus2:kts_firmness>
+        </kactus2:kts_attributes>
+    </ipxact:vendorExtensions>
+</ipxact:component>
