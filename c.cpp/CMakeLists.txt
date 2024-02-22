@@ -9,5 +9,6 @@ add_subdirectory(auto)
 add_subdirectory(catch2-exploration)
 #add_subdirectory(doctest-exploration)
 add_subdirectory(gtest-exploration)
+add_subdirectory(spdlog-exploration)
 add_subdirectory(SystemC-GTestExploration)
 
