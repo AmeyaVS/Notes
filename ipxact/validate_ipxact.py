@@ -55,6 +55,14 @@ def main():
     else:
         schema = xmlschema.XMLSchema(f"{target_path}/{schema_path[1]}")
 
+    # IP-XACT Input File to be validated
+    input_ipxact_file = "crca.1.0.xml"
+
+    if(schema.is_valid(input_ipxact_file)):
+        print("IP-XACT Document is valid")
+    else:
+        print("IP-XACT Document is not valid")
+
     # root_ns = f"{{{root_ns_uri}}}component"
 
     # print(root_ns)
