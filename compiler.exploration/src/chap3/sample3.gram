@@ -1,0 +1,5 @@
+S : i E t S S1
+S : a
+S1 : e S
+S1 : epsilon
+E : b

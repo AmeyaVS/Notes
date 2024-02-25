@@ -1,0 +1,5 @@
+sel_stmt : cond_expr EQTO cond_expr
+cond_expr : ( cond_expr )
+cond_expr : pri_expr
+pri_expr : ID
+pri_expr : CONSTANT

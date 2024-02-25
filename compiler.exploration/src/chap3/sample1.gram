@@ -1,0 +1,8 @@
+c_statement : IDENTIFIER EQ_TO_OP c_expression ;
+c_expression : CONSTANT c_expr_rest
+c_expression : IDENTIFIER c_expr_rest
+c_expr_rest : OPERATOR c_expr_factor
+c_expr_rest : epsilon
+c_expr_factor : IDENTIFIER c_expr_rest
+c_expr_factor : CONSTANT c_expr_rest
+

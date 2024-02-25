@@ -1,0 +1,9 @@
+E : T EDASH
+EDASH : PLUS T EDASH
+EDASH : epsilon
+T : F TDASH
+TDASH : STAR F TDASH
+TDASH : epsilon
+F : ( E )
+F : ID
+
