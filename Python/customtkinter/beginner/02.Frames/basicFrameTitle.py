@@ -27,28 +27,54 @@ class MyCheckboxFrame(customtkinter.CTkFrame):
         return checked_checkboxes
 
 
+class MyRadiobuttonFrame(customtkinter.CTkFrame):
+    def __init__(self, master, title, values):
+        super().__init__(master)
+        self.grid_columnconfigure(0, weight=1)
+        self.values = values
+        self.title = title
+        self.radiobuttons = []
+        self.variable = customtkinter.StringVar(value="")
+
+        self.title = customtkinter.CTkLabel(
+            self, text=self.title, fg_color="gray30", corner_radius=6
+        )
+        self.title.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="ew")
+
+        for i, value in enumerate(self.values):
+            radiobutton = customtkinter.CTkRadioButton(
+                self, text=value, value=value, variable=self.variable
+            )
+            radiobutton.grid(row=i + 1, column=0, padx=10, pady=(10, 0), sticky="w")
+            self.radiobuttons.append(radiobutton)
+
+    def get(self):
+        return self.variable.get()
+
+    def set(self, value):
+        self.variable.set(value)
+
+
 class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
         self.title("my app")
-        self.geometry("400x180")
-        self.grid_columnconfigure(0, weight=1)
+        self.geometry("400x220")
+        self.grid_columnconfigure((0, 1), weight=1)
         self.grid_rowconfigure(0, weight=1)
 
-        self.checkbox_frame_1 = MyCheckboxFrame(
+        self.checkbox_frame = MyCheckboxFrame(
             self, "Values", values=["value 1", "value 2", "value 3"]
         )
-        self.checkbox_frame_1.grid(
-            row=0, column=0, padx=10, pady=(10, 0), sticky="nsew"
-        )
-        self.checkbox_frame_2 = MyCheckboxFrame(
+        self.checkbox_frame.grid(row=0, column=0, padx=10, pady=(10, 0), sticky="nsew")
+        self.radiobutton_frame = MyRadiobuttonFrame(
             self, "Options", values=["option 1", "option 2"]
         )
-        self.checkbox_frame_2.grid(
+        self.radiobutton_frame.grid(
             row=0, column=1, padx=10, pady=(10, 0), sticky="nsew"
         )
-        self.checkbox_frame_2.configure(fg_color="transparent")
+        # self.radiobutton_frame.configure(fg_color="transparent")
 
         self.button = customtkinter.CTkButton(
             self, text="my button", command=self.button_callback
@@ -57,8 +83,8 @@ class App(customtkinter.CTk):
 
     def button_callback(self):
         print("button pressed")
-        print("checked checkbox_frame_1: ", self.checkbox_frame_1.get())
-        print("checked checkbox_frame_2: ", self.checkbox_frame_2.get())
+        print("checkbox_frame: ", self.checkbox_frame.get())
+        print("radiobutton_frame: ", self.radiobutton_frame.get())
 
 
 app = App()
