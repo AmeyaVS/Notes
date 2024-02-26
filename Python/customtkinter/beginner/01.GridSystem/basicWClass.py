@@ -18,8 +18,8 @@ class App(customtkinter.CTk):
         self.checkbox_2.grid(row=1, column=1, padx=20, pady=(0, 20), sticky="w")
 
     
-    def button_callback():
-        print("bitton pressed")
+    def button_callback(self):
+        print("button pressed")
 
 
 app = App()
