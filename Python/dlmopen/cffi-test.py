@@ -51,6 +51,8 @@ if __name__ == '__main__':
 	cmd = dedent('''
 		from sys import version_info
 		from os import getpid
+		from os import getcwd
+		import sys
 		print('Version info: {}'.format(version_info))
 		print('Process ID: {}'.format(getpid()))
 		# two quick&dirty tests to check if we're looking at separate interpreterss
@@ -61,12 +63,16 @@ if __name__ == '__main__':
 		print('After: {}'.format(getlocale()))
 		# interpreter-level state
 		from sys import modules
-		print('Before: {}'.format('itertools' in modules))
-		from itertools import chain
-		print('After: {}'.format('itertools' in modules))
+		print('Before: {}'.format('test_module' in modules))
+		print(getcwd())
+		sys.path.append(getcwd())
+		from test_module import fact
+		print('After: {}'.format('test_module' in modules))
 		print('\\n')
+		print(fact(5))
 		#execfile('cffi-test.py')
 		exec(open('cffi-test.py').read())
+
 		''')
 	run(cmd.encode('utf-8'))
 	fini()
