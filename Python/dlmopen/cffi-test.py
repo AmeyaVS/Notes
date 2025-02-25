@@ -21,7 +21,7 @@ if __name__ == '__main__':
 	# clear error
 	libc.dlerror()
 
-	handle = libc.dlmopen(LM_ID_NEWLM, 'libpython2.7.so', ffi.RTLD_DEEPBIND | ffi.RTLD_LOCAL | ffi.RTLD_LAZY)
+	handle = libc.dlmopen(LM_ID_NEWLM, b'libpython3.so', ffi.RTLD_DEEPBIND | ffi.RTLD_LOCAL | ffi.RTLD_LAZY)
 	#handle = libc.dlopen('libpython2.7.so', ffi.RTLD_DEEPBIND | ffi.RTLD_LOCAL | ffi.RTLD_LAZY)
 
 	error = libc.dlerror()
@@ -29,19 +29,19 @@ if __name__ == '__main__':
 		print('error: {}'.format(ffi.string(error)))
 		exit(1)
 
-	init = ffi.cast('void (*)(void)', libc.dlsym(handle, 'Py_Initialize'))
+	init = ffi.cast('void (*)(void)', libc.dlsym(handle, b'Py_Initialize'))
 	error = libc.dlerror()
 	if error: 
 		print('error: {}'.format(ffi.string(error)))
 		exit(1)
 
-	fini = ffi.cast('void (*)(void)', libc.dlsym(handle, 'Py_Finalize'))
+	fini = ffi.cast('void (*)(void)', libc.dlsym(handle, b'Py_Finalize'))
 	error = libc.dlerror()
 	if error: 
 		print('error: {}'.format(ffi.string(error)))
 		exit(1)
 
-	run  = ffi.cast('void (*)(const char*)', libc.dlsym(handle, 'PyRun_SimpleString'))
+	run  = ffi.cast('void (*)(const char*)', libc.dlsym(handle, b'PyRun_SimpleString'))
 	error = libc.dlerror()
 	if error: 
 		print('error: {}'.format(ffi.string(error)))
@@ -65,6 +65,11 @@ if __name__ == '__main__':
 		from itertools import chain
 		print('After: {}'.format('itertools' in modules))
 		print('\\n')
-		execfile('cffi-test.py')''')
-	run(cmd)
+		#execfile('cffi-test.py')
+		exec(open('cffi-test.py').read())
+		#with open("cffi-test.py") as f:
+		#	code = compile(f.read(), "cffi-test.py", 'exec')
+		#	exec(code, global_vars, local_vars)
+		''')
+	run(cmd.encode('utf-8'))
 	fini()
