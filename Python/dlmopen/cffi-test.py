@@ -67,9 +67,6 @@ if __name__ == '__main__':
 		print('\\n')
 		#execfile('cffi-test.py')
 		exec(open('cffi-test.py').read())
-		#with open("cffi-test.py") as f:
-		#	code = compile(f.read(), "cffi-test.py", 'exec')
-		#	exec(code, global_vars, local_vars)
 		''')
 	run(cmd.encode('utf-8'))
 	fini()
