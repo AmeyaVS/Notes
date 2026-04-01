@@ -28,14 +28,14 @@ Plugin 'L9'
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 
 " My plugins"
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'preservim/nerdtree'
+Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-git'
 Plugin 'mbbill/undotree'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'wesleyche/Trinity'
-Plugin 'wesleyche/SrcExpl'
+Plugin 'ycm-core/youcompleteme'
+Plugin 'wenlongche/Trinity'
+Plugin 'wenlongche/SrcExpl'
 " This plugin require plugin support
 " Plugin 'wincent/command-t'
 Plugin 'Tag-Signature-Balloons'
@@ -44,7 +44,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-signify'
-Plugin 'majutsushi/tagbar'
+Plugin 'preservim/tagbar'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'vim-syntastic/syntastic'
 " This Plugin requires ruby support
@@ -72,6 +72,7 @@ filetype plugin indent on    " required
 "=============================================================
 " Put here the vimrc config from $VIMRUNTIME/vimrc_example.vim
 "=============================================================
+source $VIMRUNTIME/vimrc_example.vim
 " User Defined settings
 "
 " Show line numbers

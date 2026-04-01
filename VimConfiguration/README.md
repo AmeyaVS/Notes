@@ -25,7 +25,8 @@ First create following directories and files in you home folder of the user:
 
 ```sh
 mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/plugin ~/.vim/undo
-touch ~/.vimrc
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -s $PWD/vimrc_config ~/.vimrc
 ```
 
 - **Note 1:** If you are using Vim on Windows instead of creating .vimrc file and .vim folder kindly create *_vimrc* file and *vimfiles* folder under the home folder(base folder) of the user.
